@@ -1,0 +1,22 @@
+.usersPhoto_img {
+    height: 60px;
+    width: 60px;
+}
+
+.users_item {
+    padding: 20px;
+}
+
+.selected_page {
+    font-weight: bold;
+    color: darkblue;
+}
+
+.current_page{
+    margin-top: 10px;
+    display: flex;
+}
+
+.current_page__items{
+    margin: 0 auto;
+}
