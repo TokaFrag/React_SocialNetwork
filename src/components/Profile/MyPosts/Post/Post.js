@@ -9,7 +9,10 @@ const Post = (props) => {
 			<div>
 				<span>like</span> {props.likesCount}
 			</div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 		</div>
 	)
 }

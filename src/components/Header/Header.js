@@ -1,4 +1,5 @@
 import s from './Header.module.css';
+<<<<<<< HEAD
 import {NavLink} from "react-router-dom";
 
 const Header = (props) => {
@@ -10,6 +11,12 @@ const Header = (props) => {
 				: <NavLink to={'/login'}>Login</NavLink>}
 
 		</div>
+=======
+
+const Header = () => {
+	return <header className={s.header}>
+		<img src='https://www.freelogodesign.org/Content/img/logo-ex-7.png'/>
+>>>>>>> origin/main
 	</header>
 }
 

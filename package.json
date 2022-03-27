@@ -11,9 +11,12 @@
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
     "redux": "^4.0.1",
+<<<<<<< HEAD
     "redux-form": "^8.3.8",
     "redux-thunk": "^2.4.1",
     "reselect": "^4.1.5",
+=======
+>>>>>>> origin/main
     "uuid": "^8.3.2"
   },
   "scripts": {

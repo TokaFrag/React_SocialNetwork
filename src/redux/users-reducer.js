@@ -1,20 +1,30 @@
+<<<<<<< HEAD
 import {usersAPI} from "../api/api";
 
+=======
+>>>>>>> origin/main
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET_USERS';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 const SET_TOTAL_USERS_COUNT = 'SET_TOTAL_USERS_COUNT';
+<<<<<<< HEAD
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS';
+=======
+>>>>>>> origin/main
 
 const initialState = {
 	users: [],
 	pageSize: 10,
 	totalUsersCount: 0,
+<<<<<<< HEAD
 	currentPage: 1,
 	isFetching: false,
 	followingInProgress: []
+=======
+	currentPage: 1
+>>>>>>> origin/main
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -46,6 +56,7 @@ const usersReducer = (state = initialState, action) => {
 			return {...state, currentPage: action.currentPage}
 		case SET_TOTAL_USERS_COUNT:
 			return {...state, totalUsersCount: action.totalUsersCount}
+<<<<<<< HEAD
 		case TOGGLE_IS_FETCHING:
 			return {...state, isFetching: action.isFetching}
 		case TOGGLE_IS_FOLLOWING_PROGRESS:
@@ -55,11 +66,14 @@ const usersReducer = (state = initialState, action) => {
 					? [...state.followingInProgress, action.userId]
 					: state.followingInProgress.filter(id => id != action.userId)
 			}
+=======
+>>>>>>> origin/main
 		default:
 			return state;
 	}
 }
 
+<<<<<<< HEAD
 export const follow = (userId) => ({type: FOLLOW, userId});
 export const unfollow = (userId) => ({type: UNFOLLOW, userId});
 export const setUsers = (users) => ({type: SET_USERS, users});
@@ -110,5 +124,12 @@ export const unsubscribe = (userId) => {
 			});
 	}
 }
+=======
+export const followAC = (userId) => ({type: FOLLOW, userId});
+export const unfollowAC = (userId) => ({type: UNFOLLOW, userId});
+export const setUsersAC = (users) => ({type: SET_USERS, users});
+export const setCurrentPageAC = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage});
+export const setTotalUsersCountAC = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT, totalUsersCount})
+>>>>>>> origin/main
 
 export default usersReducer;

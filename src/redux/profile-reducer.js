@@ -1,9 +1,15 @@
 import {v4 as uuidv4} from "uuid";
+<<<<<<< HEAD
 import {profileAPI, usersAPI} from "../api/api";
 
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_STATUS = 'SET_STATUS';
+=======
+
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+>>>>>>> origin/main
 
 const initialState = {
 	posts: [
@@ -12,8 +18,12 @@ const initialState = {
 		{id: 3, message: 'Blabla', likesCount: 11},
 		{id: 4, message: 'Dada', likesCount: 11}
 	],
+<<<<<<< HEAD
 	profile: null,
 	status: ''
+=======
+	newPostText: ''
+>>>>>>> origin/main
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -22,7 +32,11 @@ const profileReducer = (state = initialState, action) => {
 		case ADD_POST: {
 			const newPost = {
 				id: uuidv4(),
+<<<<<<< HEAD
 				message: action.newPostText,
+=======
+				message: state.newPostText,
+>>>>>>> origin/main
 				likesCount: 0
 			};
 			return {
@@ -31,6 +45,7 @@ const profileReducer = (state = initialState, action) => {
 				posts: [...state.posts, newPost]
 			}
 		}
+<<<<<<< HEAD
 		case SET_USER_PROFILE: {
 			return {
 				...state,
@@ -41,6 +56,13 @@ const profileReducer = (state = initialState, action) => {
 			return {
 				...state,
 				status: action.status
+=======
+
+		case UPDATE_NEW_POST_TEXT: {
+			return {
+				...state,
+				newPostText: action.newText
+>>>>>>> origin/main
 			}
 		}
 		default:
@@ -49,6 +71,7 @@ const profileReducer = (state = initialState, action) => {
 }
 
 
+<<<<<<< HEAD
 export const addPostActionCreator = (newPostText) => ({type: ADD_POST, newPostText})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
@@ -82,4 +105,10 @@ export const updateStatus = (status) => {
 			});
 	}
 }
+=======
+export const addPostActionCreator = () => ({type: ADD_POST})
+export const updateNewPostTextActionCreator = (text) =>
+	({type: UPDATE_NEW_POST_TEXT, newText: text})
+
+>>>>>>> origin/main
 export default profileReducer;
